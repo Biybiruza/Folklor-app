@@ -18,5 +18,9 @@
 
     </style>
 
+    <style name="Theme.Folklor.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Folklor.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
     <style name="Theme.FolklorApp" parent="Base.Theme.FolklorApp" />
 </resources>
