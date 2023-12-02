@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/tools"
-    app:cardCornerRadius="18dp"
+    android:layout_width="match_parent"
+    android:layout_height="550dp"
     android:elevation="12dp"
-    app:cardElevation="8dp"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="12dp"
+    android:background="?attr/colorSecondaryVariant"
     app:cardUseCompatPadding="true"
     card_view:cardCornerRAdius="8dp">
 
@@ -18,11 +18,12 @@
         <ImageView
             android:id="@+id/ImageViewBook"
             android:layout_width="match_parent"
-            android:layout_height="550dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/folklor0"
             app:layout_constraintEnd_toEndOf="parent"
-            android:src="@drawable/folklor0"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

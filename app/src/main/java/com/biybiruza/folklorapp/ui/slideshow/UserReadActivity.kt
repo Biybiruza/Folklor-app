@@ -4,6 +4,7 @@ import android.os.AsyncTask
 import android.os.Build
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.biybiruza.folklorapp.databinding.ActivityUserReadBinding
@@ -50,6 +51,7 @@ class UserReadActivity : AppCompatActivity() {
 
         // Here load the pdf and dismiss the dialog box
         override fun onPostExecute(inputStream: InputStream?) {
+
             binding.pdfViewUser.fromStream(inputStream)
                     .enableSwipe(true)
                     .swipeHorizontal(false)
@@ -58,6 +60,7 @@ class UserReadActivity : AppCompatActivity() {
                     .scrollHandle(DefaultScrollHandle(this@UserReadActivity))
                     .spacing(2)
                     .load()
+            binding.progress.visibility = View.GONE
         }
 
         override fun doInBackground(vararg p0: String?): InputStream? {

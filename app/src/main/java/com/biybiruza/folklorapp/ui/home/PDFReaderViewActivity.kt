@@ -7,10 +7,13 @@ import android.os.Bundle
 import android.os.StrictMode
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.biybiruza.folklorapp.R
+import com.biybiruza.folklorapp.databinding.ActivityPDFReaderViewBinding
 import com.github.barteksc.pdfviewer.PDFView
 import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle
 import java.io.File
@@ -24,9 +27,11 @@ class PDFReaderViewActivity : AppCompatActivity() {
     private lateinit var pdfList: List<String>
     var n = 0
     private lateinit var pdfListTitle: List<String>
+    lateinit var binding: ActivityPDFReaderViewBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityPDFReaderViewBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_p_d_f_reader_view)
         pdfList = listOf("Qaraqalpaq folklori. Alpamis.pdf",
                 "Qaraqalpaq folklori. Er Ziywar. Qurbanbek.pdf",
@@ -44,9 +49,17 @@ class PDFReaderViewActivity : AppCompatActivity() {
         n = intent.getIntExtra(ID, 0)
 
         //back button
-        supportActionBar?.setHomeButtonEnabled(true)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeButtonEnabled(false)
+        supportActionBar?.setDisplayHomeAsUpEnabled(false)
         supportActionBar?.title = pdfListTitle[n]
+
+        /*binding.ivBack.setOnClickListener {
+            this.onBackPressed()
+        }
+        binding.tvActionTitle.text = pdfListTitle[n]*/
+
+        //progressBar
+        val progress = findViewById<ProgressBar>(R.id.progressBar)
 
         //pdf reader
         val pdfView = findViewById<PDFView>(R.id.pdfView)
@@ -58,6 +71,7 @@ class PDFReaderViewActivity : AppCompatActivity() {
             .scrollHandle(DefaultScrollHandle(this))
             .spacing(2)
             .load()
+        progress.visibility = View.GONE
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
