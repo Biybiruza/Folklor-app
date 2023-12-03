@@ -1,8 +1,10 @@
 package com.biybiruza.folklorapp.ui.slideshow
 
+import android.app.AlertDialog
 import android.os.AsyncTask
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
 import android.view.MenuItem
 import android.view.View
 import androidx.annotation.RequiresApi
@@ -17,9 +19,9 @@ import java.net.URL
 
 class UserReadActivity : AppCompatActivity() {
 
-    companion object{
+    companion object {
         const val ID = "id"
-        const val URLID ="uriId"
+        const val URLID = "uriId"
     }
 
     private lateinit var binding: ActivityUserReadBinding
@@ -32,8 +34,8 @@ class UserReadActivity : AppCompatActivity() {
         binding = ActivityUserReadBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        s = intent.getStringExtra(URLID)?: ""
-        name = intent.getStringExtra(ID)?: ""
+        s = intent.getStringExtra(URLID) ?: ""
+        name = intent.getStringExtra(ID) ?: ""
 
         //back button
         supportActionBar?.setHomeButtonEnabled(true)
@@ -53,13 +55,22 @@ class UserReadActivity : AppCompatActivity() {
         override fun onPostExecute(inputStream: InputStream?) {
 
             binding.pdfViewUser.fromStream(inputStream)
-                    .enableSwipe(true)
-                    .swipeHorizontal(false)
-                    .defaultPage(0)
-                    .enableAnnotationRendering(true)
-                    .scrollHandle(DefaultScrollHandle(this@UserReadActivity))
-                    .spacing(2)
-                    .load()
+                .enableSwipe(true)
+                .swipeHorizontal(false)
+                .defaultPage(0)
+                .enableAnnotationRendering(true)
+                .scrollHandle(DefaultScrollHandle(this@UserReadActivity))
+                .spacing(2)
+                .load()
+
+            val alertDialog = AlertDialog.Builder(this@UserReadActivity)
+                .setTitle("Xabarlandiriw")
+                .setMessage("Biraz kutsen'iz kitap ashadi").create()
+            alertDialog.show()
+            Handler().postDelayed({
+                alertDialog.dismiss()
+            },2000)
+
             binding.progress.visibility = View.GONE
         }
 
@@ -89,7 +100,7 @@ class UserReadActivity : AppCompatActivity() {
 //        var path = getExternalFilesDir(null)?.absolutePath.toString() + pdfList[n]
 //        val file = File(path)
 
-        when(item.itemId){
+        when (item.itemId) {
             android.R.id.home -> finish()
 //            R.id.item_share -> {
 //                val shareIntent: Intent = Intent().apply {

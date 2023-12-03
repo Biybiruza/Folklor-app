@@ -20,7 +20,8 @@
         </activity>
         <activity
             android:name=".ui.activitys.SplashActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.FolklorApp.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

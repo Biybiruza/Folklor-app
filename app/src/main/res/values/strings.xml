@@ -11,6 +11,7 @@
     <string name="menu_home">бас бөлим</string>
     <string name="menu_gallery">Фолклор ҳаққында түсиник</string>
     <string name="menu_saylandi">Томлар</string>
+    <string name="app_info">Апп инфо</string>
     <string name="folklor_haqq_nda_t_sinik">Оғада бай болған қарақалпақ фолклоры бир неше әсирлер бойы раўажланып отырған.
         Оның негизин аўыз еки халық дөретиўшилигиниң барлық жанрлары: <b>ертеклер</b>, <b>нақыл-мақаллар</b>, <b>әпсаналар</b>, <b>дәстанлар</b> ҳәм т.б. қурайды.
         <p><br>\n\nЕпос, яки епикалық поемалар – дәстанлар қарақалпақ халық аўыз еки дөретиўшилиги ушын ең характерли ҳәм өзине тән белгиси болып,
@@ -29,5 +30,12 @@
     </string>
     <string name="send_to">send_to</string>
     <string name="splash_title">Қарақалпақ фолклоры</string>
+    <string name="settings">Сазланбалар</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_info_text">Бул программа Андроид программаластырыў бойынша оқыў даўамында иеленген билимлерди әмелиятда сынап көриў мақсетинде ислеп шығылған.<p>\n
+        Программа пайдаланыўшысы Қарақалпақ фолклоры менен жақыннан тасыўы мүмкин. ҳәм буннан тысқары онлайн ҳәм офлайн оқыў мүмкиншилиги де бар
+    </p><p >\n\n<b>Create by </b><a style="background-color" href="https://t.me/ibashova"><font color="blue">@Biybiruza</font></a></p>
+    </string>
 
 </resources>
