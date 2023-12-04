@@ -10,4 +10,4 @@ Full function:
   <img src="video/folklor.gif" width="300">
 </p>
 
-Used library and technologies: Firebase, Glide and Jetpack navigation
+Used library and technologies: Firebase, Jetpack navigation, Glide, Picasso, pdf viewer, and carousel view 
