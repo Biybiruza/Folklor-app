@@ -1,4 +1,4 @@
-# note_app
+# folklor_app
 
 Folklor app
 
@@ -7,7 +7,7 @@ Folklor app
 Full function:
 
 <p align="left">
-  <img src="video/folklor.mp4" width="300">
+  <video src="video/folklor.mp4" width="300"></video>
 </p>
 
 Used library and technologies: Firebase, Glide and Jetpack navigation
