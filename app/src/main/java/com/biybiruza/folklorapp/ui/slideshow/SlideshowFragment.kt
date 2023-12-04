@@ -44,6 +44,7 @@ class SlideshowFragment : Fragment(R.layout.fragment_slideshow){
         // Read from the database
         mDatabase.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
+                binding.progressBarHome.visibility = View.GONE
                 for (userSnapshot in dataSnapshot.children){
                     val value = userSnapshot.getValue(Users::class.java)
                     userList.add(value!!)

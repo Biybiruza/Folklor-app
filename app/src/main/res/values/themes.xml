@@ -13,7 +13,7 @@
         <item name="colorSecondaryVariant">@color/teal_200</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor" tools:targetApi="M">?attr/colorPrimaryVariant</item>
         <item name="android:actionBarStyle" >?attr/colorPrimary</item>
         <!-- Customize your theme here. -->
 
@@ -28,5 +28,8 @@
 
     <style name="Theme.Folklor.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-<!--    <style name="Theme.FolklorApp" parent="Base.Theme.FolklorApp" />-->
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/rounded_corner</item>
+    </style>
+
 </resources>

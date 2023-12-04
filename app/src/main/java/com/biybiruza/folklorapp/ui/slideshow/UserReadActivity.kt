@@ -9,6 +9,7 @@ import android.view.MenuItem
 import android.view.View
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import com.biybiruza.folklorapp.R
 import com.biybiruza.folklorapp.databinding.ActivityUserReadBinding
 import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle
 import java.io.BufferedInputStream
@@ -63,13 +64,15 @@ class UserReadActivity : AppCompatActivity() {
                 .spacing(2)
                 .load()
 
-            val alertDialog = AlertDialog.Builder(this@UserReadActivity)
-                .setTitle("Xabarlandiriw")
-                .setMessage("Biraz kutsen'iz kitap ashadi").create()
+            val view = layoutInflater.inflate(R.layout.custom_dialog,null)
+            val alertDialog = AlertDialog.Builder(this@UserReadActivity,R.style.CustomAlertDialog)
+                .setTitle("Хабарландириў")
+//                .setMessage(R.string.alert_dialog)
+                .setView(view).create()
             alertDialog.show()
             Handler().postDelayed({
                 alertDialog.dismiss()
-            },2000)
+            },3000)
 
             binding.progress.visibility = View.GONE
         }

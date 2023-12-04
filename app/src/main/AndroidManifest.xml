@@ -30,7 +30,8 @@
         </activity>
         <activity android:name=".ui.slideshow.UserReadActivity"/>
         <activity android:name=".ui.home.PDFReaderViewActivity"
-             />
+            android:exported="true"
+            android:theme="@style/Theme.FolklorApp"/>
     </application>
 
 </manifest>

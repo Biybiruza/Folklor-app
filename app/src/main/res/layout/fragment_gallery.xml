@@ -24,11 +24,11 @@
             android:id="@+id/carouselView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:fillColor="#FFFFFFFF"
+            app:fillColor="?attr/colorPrimary"
             app:pageColor="#00000000"
             app:radius="6dp"
             app:slideInterval="3000"
-            app:strokeColor="#D8D8D8"
+            app:strokeColor="?attr/colorPrimaryVariant"
             app:strokeWidth="2dp"
             tools:ignore="MissingClass" />
 
@@ -40,13 +40,14 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:padding="8dp"
+        android:layout_marginHorizontal="16dp"
         android:scrollbars="none"
         android:textAlignment="viewStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/card"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="32dp">
+        android:layout_marginBottom="8dp">
 
         <TextView
             android:id="@+id/text_gallery"
@@ -54,10 +55,10 @@
             android:layout_height="0dp"
             android:text="@string/folklor_haqq_nda_t_sinik"
             android:textAlignment="inherit"
+            android:justificationMode="inter_word"
             android:textColor="?attr/colorSecondary"
-            android:textSize="16dp"
-            android:textStyle="normal"
-            android:layout_marginBottom="16dp"/>
+            android:textSize="18dp"
+            android:textStyle="normal"/>
 
     </ScrollView>
 

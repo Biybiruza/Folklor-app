@@ -8,7 +8,7 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="item_bookmark">favorite</string>
 
-    <string name="menu_home">бас бөлим</string>
+    <string name="menu_home">Бас бөлим</string>
     <string name="menu_gallery">Фолклор ҳаққында түсиник</string>
     <string name="menu_saylandi">Томлар</string>
     <string name="app_info">Апп инфо</string>
@@ -30,12 +30,13 @@
     </string>
     <string name="send_to">send_to</string>
     <string name="splash_title">Қарақалпақ фолклоры</string>
-    <string name="settings">Сазланбалар</string>
+    <string name="settings">Қосымша</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="app_info_text">Бул программа Андроид программаластырыў бойынша оқыў даўамында иеленген билимлерди әмелиятда сынап көриў мақсетинде ислеп шығылған.<p>\n
         Программа пайдаланыўшысы Қарақалпақ фолклоры менен жақыннан тасыўы мүмкин. ҳәм буннан тысқары онлайн ҳәм офлайн оқыў мүмкиншилиги де бар
-    </p><p >\n\n<b>Create by </b><a style="background-color" href="https://t.me/ibashova"><font color="blue">@Biybiruza</font></a></p>
+    </p><p >\n\n<a style="background-color" href="https://t.me/ibashova"><font color="blue">@Biybiruza</font></a> <b> тәрепинен жаратылды</b></p>
     </string>
+    <string name="alert_dialog">Бул китап сканнерленген китап шөккишны ушин көлеми көп сол себепли жуклениўге көбирек ўақит талап етеди, бираз кутсеңиз ашылады</string>
 
 </resources>

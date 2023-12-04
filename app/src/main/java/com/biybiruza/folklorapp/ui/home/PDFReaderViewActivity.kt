@@ -1,15 +1,11 @@
 package com.biybiruza.folklorapp.ui.home
 
-import android.content.Intent
-import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.StrictMode
-import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.ProgressBar
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.biybiruza.folklorapp.R
@@ -49,8 +45,8 @@ class PDFReaderViewActivity : AppCompatActivity() {
         n = intent.getIntExtra(ID, 0)
 
         //back button
-        supportActionBar?.setHomeButtonEnabled(false)
-        supportActionBar?.setDisplayHomeAsUpEnabled(false)
+        supportActionBar?.setHomeButtonEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = pdfListTitle[n]
 
         /*binding.ivBack.setOnClickListener {
@@ -74,10 +70,10 @@ class PDFReaderViewActivity : AppCompatActivity() {
         progress.visibility = View.GONE
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    /*override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.main, menu)
         return true
-    }
+    }*/
 
     //back button clicked
     @RequiresApi(Build.VERSION_CODES.Q)
@@ -88,15 +84,6 @@ class PDFReaderViewActivity : AppCompatActivity() {
 
         when(item.itemId){
             android.R.id.home -> finish()
-            R.id.item_share -> {
-                val shareIntent: Intent = Intent().apply {
-                    action = Intent.ACTION_SEND
-                    putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file))
-                    type = "application/pdf"
-                }
-                Toast.makeText(this, pdfList[n], Toast.LENGTH_LONG).show()
-                startActivity(shareIntent)
-            }
         }
         return super.onOptionsItemSelected(item)
     }
