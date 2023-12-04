@@ -7,7 +7,7 @@ Folklor app
 Full function:
 
 <p align="left">
-  <video resource="video/folklor.mp4" width="300"></video>
+  <img src="video/folklor.gif" width="300">
 </p>
 
 Used library and technologies: Firebase, Glide and Jetpack navigation
