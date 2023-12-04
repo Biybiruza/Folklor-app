@@ -38,5 +38,6 @@
     </p><p >\n\n<a style="background-color" href="https://t.me/ibashova"><font color="blue">@Biybiruza</font></a> <b> тәрепинен жаратылды</b></p>
     </string>
     <string name="alert_dialog">Бул китап сканнерленген китап шөккишны ушин көлеми көп сол себепли жуклениўге көбирек ўақит талап етеди, бираз кутсеңиз ашылады</string>
+    <string name="alert_dialog_title">Хабарландириў</string>
 
 </resources>

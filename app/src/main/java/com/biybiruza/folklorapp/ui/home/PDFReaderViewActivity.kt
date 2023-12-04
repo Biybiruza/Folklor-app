@@ -23,12 +23,12 @@ class PDFReaderViewActivity : AppCompatActivity() {
     private lateinit var pdfList: List<String>
     var n = 0
     private lateinit var pdfListTitle: List<String>
-    lateinit var binding: ActivityPDFReaderViewBinding
+    private lateinit var binding: ActivityPDFReaderViewBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPDFReaderViewBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_p_d_f_reader_view)
+        setContentView(binding.root)
         pdfList = listOf("Qaraqalpaq folklori. Alpamis.pdf",
                 "Qaraqalpaq folklori. Er Ziywar. Qurbanbek.pdf",
                 "Qaraqalpaq folklori. Naqil-maqallar.pdf", "Qaraqalpaq folklori. Jumbaqlar.pdf", "Qaraqalpaq folklori. Qoblan.pdf",
@@ -44,10 +44,11 @@ class PDFReaderViewActivity : AppCompatActivity() {
 
         n = intent.getIntExtra(ID, 0)
 
+        binding.tvTitle.text = pdfListTitle[n]
         //back button
-        supportActionBar?.setHomeButtonEnabled(true)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = pdfListTitle[n]
+        binding.backBtn.setOnClickListener {
+            this.onBackPressed()
+        }
 
         /*binding.ivBack.setOnClickListener {
             this.onBackPressed()

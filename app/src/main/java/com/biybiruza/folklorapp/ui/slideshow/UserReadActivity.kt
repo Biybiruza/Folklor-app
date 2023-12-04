@@ -38,14 +38,11 @@ class UserReadActivity : AppCompatActivity() {
         s = intent.getStringExtra(URLID) ?: ""
         name = intent.getStringExtra(ID) ?: ""
 
+        binding.tvTitle.text= name
         //back button
-        supportActionBar?.setHomeButtonEnabled(true)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = name
-
-        /*Log.d(s, "bibi")
-//        val uri = Uri.parse(s)
-        Toast.makeText(this, "item clicked $s", Toast.LENGTH_LONG).show()*/
+        binding.backBtn.setOnClickListener {
+            finish()
+        }
 
         RetrivePdfStream().execute(s)
     }
@@ -66,7 +63,7 @@ class UserReadActivity : AppCompatActivity() {
 
             val view = layoutInflater.inflate(R.layout.custom_dialog,null)
             val alertDialog = AlertDialog.Builder(this@UserReadActivity,R.style.CustomAlertDialog)
-                .setTitle("Хабарландириў")
+//                .setTitle("Хабарландириў")
 //                .setMessage(R.string.alert_dialog)
                 .setView(view).create()
             alertDialog.show()
