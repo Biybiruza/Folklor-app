@@ -5,15 +5,15 @@ plugins {
 }
 
 android {
-    namespace = "com.biybiruza.folklorapp"
+    namespace = "com.biybiruza.folklor"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.biybiruza.folklorapp"
+        applicationId = "com.biybiruza.folklor"
         minSdk = 24
         targetSdk = 33
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "2.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
