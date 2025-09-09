@@ -20,17 +20,10 @@
         android:background="@color/white"
         android:layout_margin="16dp">
 
-        <com.synnapps.carouselview.CarouselView
-            android:id="@+id/carouselView"
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:fillColor="?attr/colorPrimary"
-            app:pageColor="#00000000"
-            app:radius="6dp"
-            app:slideInterval="3000"
-            app:strokeColor="?attr/colorPrimaryVariant"
-            app:strokeWidth="2dp"
-            tools:ignore="MissingClass" />
+            android:layout_height="match_parent"/>
 
     </androidx.cardview.widget.CardView>
 

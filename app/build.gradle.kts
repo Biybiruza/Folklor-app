@@ -52,12 +52,8 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.5")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.5")
 
-    //carouselView
-    implementation("com.synnapps:carouselview:0.1.5")
-
     //pdf viewer
-    implementation("com.github.barteksc:android-pdf-viewer:2.8.2")
-    implementation("com.github.barteksc:android-pdf-viewer:3.2.0-beta.1")
+    implementation ("com.github.mhiew:android-pdf-viewer:3.2.0-beta.1")
 
     //Glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
@@ -67,6 +63,9 @@ dependencies {
     implementation("com.google.firebase:firebase-database:20.3.0")
     //picasso
     implementation("com.squareup.picasso:picasso:2.71828")
+
+    /*//auto image slider
+    implementation ("com.github.smarteist:AutoImageSlider:1.4.0-appcompat")*/
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

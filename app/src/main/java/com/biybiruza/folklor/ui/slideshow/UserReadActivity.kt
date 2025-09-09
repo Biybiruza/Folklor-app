@@ -11,6 +11,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.biybiruza.folklor.R
 import com.biybiruza.folklor.databinding.ActivityUserReadBinding
+import com.github.barteksc.pdfviewer.PDFView
 import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle
 import java.io.BufferedInputStream
 import java.io.IOException

@@ -16,9 +16,7 @@ class GalleryFragment : Fragment(R.layout.fragment_gallery) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentGalleryBinding.bind(view)
 
-        binding.carouselView.setImageListener { position, imageView ->
-            imageView.setImageResource(photoList[position])
-        }
-        binding.carouselView.pageCount = photoList.count()
+        binding.viewPager2.adapter = PhotoAdapter(photoList.toList())
+
     }
 }
